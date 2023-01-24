@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "share-point-ui-tailwind-client-side-solution",
+    "id": "63fb0d3c-3a38-4a79-b515-edb120241881",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.16.1"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "share-point-ui-tailwind description"
+      },
+      "longDescription": {
+        "default": "share-point-ui-tailwind description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "share-point-ui-tailwind Feature",
+        "description": "The feature that activates elements of the share-point-ui-tailwind solution.",
+        "id": "1a0f8a8e-3548-4d17-b839-503036d335ae",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/share-point-ui-tailwind.sppkg"
+  }
+}
