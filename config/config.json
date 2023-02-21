@@ -2,17 +2,17 @@
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
   "version": "2.0",
   "bundles": {
-    "virtual-machine-management-app-web-part": {
+    "rhomberg-studio-spfx-tailwind-app-web-part": {
       "components": [
         {
-          "entrypoint": "./lib/webparts/virtualMachineManagementApp/VirtualMachineManagementAppWebPart.js",
-          "manifest": "./src/webparts/virtualMachineManagementApp/VirtualMachineManagementAppWebPart.manifest.json"
+          "entrypoint": "./lib/webparts/rhombergStudioSpfxTailwindApp/RhombergStudioSpfxTailwindAppWebPart.js",
+          "manifest": "./src/webparts/rhombergStudioSpfxTailwindApp/RhombergStudioSpfxTailwindAppWebPart.manifest.json"
         }
       ]
     }
   },
   "externals": {},
   "localizedResources": {
-    "VirtualMachineManagementAppWebPartStrings": "lib/webparts/virtualMachineManagementApp/loc/{locale}.js"
+    "RhombergStudioSpfxTailwindAppWebPartStrings": "lib/webparts/rhombergStudioSpfxTailwindApp/loc/{locale}.js"
   }
 }

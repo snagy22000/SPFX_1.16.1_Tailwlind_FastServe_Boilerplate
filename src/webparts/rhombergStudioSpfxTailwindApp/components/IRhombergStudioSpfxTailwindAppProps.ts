@@ -1,4 +1,4 @@
-export interface IVirtualMachineManagementAppProps {
+export interface IRhombergStudioSpfxTailwindAppProps {
   description: string;
   isDarkTheme: boolean;
   environmentMessage: string;

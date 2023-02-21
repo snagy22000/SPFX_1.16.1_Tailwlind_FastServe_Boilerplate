@@ -8,24 +8,22 @@ import {
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import { IReadonlyTheme } from '@microsoft/sp-component-base';
 
-import * as strings from 'VirtualMachineManagementAppWebPartStrings';
-import VirtualMachineManagementApp from './components/VirtualMachineManagementApp';
-import { IVirtualMachineManagementAppProps } from './components/IVirtualMachineManagementAppProps';
-import '../../../assets/dist/tailwind.css';
+import * as strings from 'RhombergStudioSpfxTailwindAppWebPartStrings';
+import RhombergStudioSpfxTailwindApp from './components/RhombergStudioSpfxTailwindApp';
+import { IRhombergStudioSpfxTailwindAppProps } from './components/IRhombergStudioSpfxTailwindAppProps';
 
-
-export interface IVirtualMachineManagementAppWebPartProps {
+export interface IRhombergStudioSpfxTailwindAppWebPartProps {
   description: string;
 }
 
-export default class VirtualMachineManagementAppWebPart extends BaseClientSideWebPart<IVirtualMachineManagementAppWebPartProps> {
+export default class RhombergStudioSpfxTailwindAppWebPart extends BaseClientSideWebPart<IRhombergStudioSpfxTailwindAppWebPartProps> {
 
   private _isDarkTheme: boolean = false;
   private _environmentMessage: string = '';
 
   public render(): void {
-    const element: React.ReactElement<IVirtualMachineManagementAppProps> = React.createElement(
-      VirtualMachineManagementApp,
+    const element: React.ReactElement<IRhombergStudioSpfxTailwindAppProps> = React.createElement(
+      RhombergStudioSpfxTailwindApp,
       {
         description: this.properties.description,
         isDarkTheme: this._isDarkTheme,
@@ -39,37 +37,17 @@ export default class VirtualMachineManagementAppWebPart extends BaseClientSideWe
   }
 
   protected onInit(): Promise<void> {
-    return this._getEnvironmentMessage().then(message => {
-      this._environmentMessage = message;
-    });
+    this._environmentMessage = this._getEnvironmentMessage();
+
+    return super.onInit();
   }
 
-
-
-  private _getEnvironmentMessage(): Promise<string> {
-    if (!!this.context.sdks.microsoftTeams) { // running in Teams, office.com or Outlook
-      return this.context.sdks.microsoftTeams.teamsJs.app.getContext()
-        .then(context => {
-          let environmentMessage: string = '';
-          switch (context.app.host.name) {
-            case 'Office': // running in Office
-              environmentMessage = this.context.isServedFromLocalhost ? strings.AppLocalEnvironmentOffice : strings.AppOfficeEnvironment;
-              break;
-            case 'Outlook': // running in Outlook
-              environmentMessage = this.context.isServedFromLocalhost ? strings.AppLocalEnvironmentOutlook : strings.AppOutlookEnvironment;
-              break;
-            case 'Teams': // running in Teams
-              environmentMessage = this.context.isServedFromLocalhost ? strings.AppLocalEnvironmentTeams : strings.AppTeamsTabEnvironment;
-              break;
-            default:
-              throw new Error('Unknown host');
-          }
-
-          return environmentMessage;
-        });
+  private _getEnvironmentMessage(): string {
+    if (!!this.context.sdks.microsoftTeams) { // running in Teams
+      return this.context.isServedFromLocalhost ? strings.AppLocalEnvironmentTeams : strings.AppTeamsTabEnvironment;
     }
 
-    return Promise.resolve(this.context.isServedFromLocalhost ? strings.AppLocalEnvironmentSharePoint : strings.AppSharePointEnvironment);
+    return this.context.isServedFromLocalhost ? strings.AppLocalEnvironmentSharePoint : strings.AppSharePointEnvironment;
   }
 
   protected onThemeChanged(currentTheme: IReadonlyTheme | undefined): void {

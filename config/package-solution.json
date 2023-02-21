@@ -1,8 +1,8 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "share-point-ui-tailwind-client-side-solution",
-    "id": "63fb0d3c-3a38-4a79-b515-edb120241881",
+    "name": "rhomberg-studio-spfx-tailwind-client-side-solution",
+    "id": "e61d4999-f4d9-4df2-a095-65e07d0d525c",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
@@ -12,14 +12,14 @@
       "websiteUrl": "",
       "privacyUrl": "",
       "termsOfUseUrl": "",
-      "mpnId": "Undefined-1.16.1"
+      "mpnId": "Undefined-1.15.2"
     },
     "metadata": {
       "shortDescription": {
-        "default": "share-point-ui-tailwind description"
+        "default": "rhomberg-studio-spfx-tailwind description"
       },
       "longDescription": {
-        "default": "share-point-ui-tailwind description"
+        "default": "rhomberg-studio-spfx-tailwind description"
       },
       "screenshotPaths": [],
       "videoUrl": "",
@@ -27,14 +27,14 @@
     },
     "features": [
       {
-        "title": "share-point-ui-tailwind Feature",
-        "description": "The feature that activates elements of the share-point-ui-tailwind solution.",
-        "id": "1a0f8a8e-3548-4d17-b839-503036d335ae",
+        "title": "rhomberg-studio-spfx-tailwind Feature",
+        "description": "The feature that activates elements of the rhomberg-studio-spfx-tailwind solution.",
+        "id": "693e52b3-6717-489b-9688-13cdf0e03783",
         "version": "1.0.0.0"
       }
     ]
   },
   "paths": {
-    "zippedPackage": "solution/share-point-ui-tailwind.sppkg"
+    "zippedPackage": "solution/rhomberg-studio-spfx-tailwind.sppkg"
   }
 }
