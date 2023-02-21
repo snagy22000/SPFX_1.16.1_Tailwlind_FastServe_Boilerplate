@@ -11,6 +11,7 @@ import { IReadonlyTheme } from '@microsoft/sp-component-base';
 import * as strings from 'RhombergStudioSpfxTailwindAppWebPartStrings';
 import RhombergStudioSpfxTailwindApp from './components/RhombergStudioSpfxTailwindApp';
 import { IRhombergStudioSpfxTailwindAppProps } from './components/IRhombergStudioSpfxTailwindAppProps';
+import '../../../assets/dist/tailwind.css';
 
 export interface IRhombergStudioSpfxTailwindAppWebPartProps {
   description: string;
