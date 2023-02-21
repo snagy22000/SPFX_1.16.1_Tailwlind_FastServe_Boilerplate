@@ -7,7 +7,12 @@
     "build": "gulp bundle",
     "clean": "gulp clean",
     "test": "gulp test",
-    "serve": "gulp bundle --custom-serve --max_old_space_size=4096 && fast-serve"
+    "serve": "gulp bundle --custom-serve --max_old_space_size=4096 && fast-serve",
+    "serve:1": "gulp bundle && fast-serve",
+    "watch:tailwind": "gulp tailwind",
+    "dev:test": "concurrently \"npm run watch:tailwind\" \"npm run serve\"",
+    "dev:spfx": "gulp clean && gulp build && gulp bundle && gulp package-solution",
+    "prod:spfx": "gulp clean && gulp build --ship --warnoff && gulp bundle --ship --warnoff && gulp package-solution --ship"
   },
   "dependencies": {
     "@microsoft/mgt-react": "^2.9.0",
@@ -39,7 +44,9 @@
     "@types/webpack-env": "~1.15.2",
     "ajv": "^6.12.5",
     "autoprefixer": "^10.4.13",
+    "concurrently": "^7.6.0",
     "eslint-plugin-react-hooks": "4.3.0",
+    "file-loader": "^6.2.0",
     "gulp": "4.0.2",
     "gulp-postcss": "^9.0.1",
     "postcss": "^8.4.21",
