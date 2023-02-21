@@ -1,0 +1,16 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "version": "1.15.2",
+    "libraryName": "rhomberg-studio-spfx-tailwind",
+    "libraryId": "e61d4999-f4d9-4df2-a095-65e07d0d525c",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "rhomberg-studio-spfx-tailwind",
+    "solutionShortDescription": "rhomberg-studio-spfx-tailwind description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}
